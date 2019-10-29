@@ -41,7 +41,6 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
 const ctaImg = document.getElementById('cta-img'); 
 ctaImg.setAttribute ('src', 'img/header-img.png'); 
 
@@ -50,32 +49,15 @@ midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 
 
+ const aTag = document.querySelectorAll('a'); 
+ let i = 0;  
+ aTag.forEach(tags => {
+      tags.textContent = siteContent ['nav'][`nav-item-${i}`]; 
+    i++; 
+}); //missing a tag
 
+const h1Text = document.querySelector('h1'); 
+console.log(h1Text); 
 
-// const parentNav = document.querySelector('nav'); 
-// parentNav.appendChild('nav'); 
-
-let accumulator = 0; 
-const aTags = document.querySelectorAll('a'); 
-aTags.forEach (tag => {
-if (accumulator < aTags.length) {
-  tag.textContent = siteContent ['nav'][`nav-item-${accumulator}`]; 
-  accumulator++; 
-}
-})
-
-
-
-const h1Top = document.getElementsByTagName('h1');  
-h1Top.textContent = siteContent ['cta']['h1']; 
-
-// let count = 0;
-// const h1Top = document.querySelector('h1'); 
-// h1Top.textContent ='DOM IS AWESOME';
-// h1Top.style.textAlign = 'center'; 
-// h1Top.forEach(word => {
-// if (count < h1Top.length){
-//   word.createElement= siteContent ['cta'][`h1 ${count}`]('br'); 
-//   count ++; 
-// }
-// })
+// const btn = document.querySelector('cta.button'); 
+// console.log(btn); 
