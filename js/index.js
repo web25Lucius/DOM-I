@@ -58,6 +58,10 @@ midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 const h1Text = document.querySelector('h1'); 
 console.log(h1Text); 
+h1Text.textContent = siteContent ['cta']['h1']; 
+//add <br> without using innerhtml 
 
-// const btn = document.querySelector('cta.button'); 
-// console.log(btn); 
+
+const btn = document.querySelector('button'); 
+console.log(btn); 
+btn.textContent = siteContent ['cta']['button']; 
