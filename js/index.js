@@ -67,15 +67,41 @@ console.log(btn);
 btn.textContent = siteContent ['cta']['button']; 
 
 
-//feature and about
-// const featureAbout= document.querySelectorAll('.text-content'); 
-// let i = 0;  
-//   featureAbout.forEach(text =>{
-//    text.textContent = siteContent ['main-content'][`${i}`]; 
-//    i++ <= featureAbout.length; 
-//  })
+//top content
+const featuresH4 = document.querySelector('.top-content h4');
+featuresH4.textContent = siteContent['main-content'] ['features-h4'];
 
+const featuresP = document.querySelector('.top-content p');
+featuresP.textContent = siteContent['main-content']['features-content'];
 
+const aboutH4 = document.querySelector('.top-content div:last-child h4');
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+
+const aboutP = document.querySelector('.top-content div:last-child p');
+aboutP.textContent = siteContent['main-content']['about-content'];
+
+//
+const servicesH4 = document.querySelector('.bottom-content h4');
+servicesH4.textContent = siteContent['main-content'] ['services-h4'];
+
+const servicesP = document.querySelector('.bottom-content p');
+servicesP.textContent = siteContent['main-content']['services-content'];
+
+//nth-last-child (2)
+const productH4 = document.querySelector('.bottom-content div:nth-last-child(2) h4');
+productH4.textContent = siteContent['main-content']['product-h4'];
+
+const productP = document.querySelector('.bottom-content div:nth-last-child(2) p');
+productP.textContent = siteContent['main-content']['product-content'];
+
+//nth-last-child 
+const visionH4 = document.querySelector('.bottom-content div:last-child h4'); 
+visionH4.textContent = siteContent ['main-content']['vision-h4']; 
+
+const visionP = document.querySelector('.bottom-content div:last-child p'); 
+visionP.textContent = siteContent ['main-content']['vision-content']
+
+//contact section
 
 
 
