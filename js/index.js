@@ -48,13 +48,13 @@ const midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', 'img/mid-page-accent.jpg'); 
 
 
-
- const aTag = document.querySelectorAll('a'); 
- let i = 0;  
- aTag.forEach(tags => {
-      tags.textContent = siteContent ['nav'][`nav-item-${i}`]; 
-    i++; 
-}); //missing a tag
+//nav 
+const aTag= document.querySelectorAll('a'); 
+let i = 1;  
+ aTag.forEach(tags =>{
+   tags.textContent = siteContent ['nav'][`nav-item-${i}`]; 
+   i++; 
+ })
 
 const h1Text = document.querySelector('h1'); 
 console.log(h1Text); 
@@ -65,3 +65,5 @@ h1Text.textContent = siteContent ['cta']['h1'];
 const btn = document.querySelector('button'); 
 console.log(btn); 
 btn.textContent = siteContent ['cta']['button']; 
+
+
