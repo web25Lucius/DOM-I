@@ -67,3 +67,26 @@ console.log(btn);
 btn.textContent = siteContent ['cta']['button']; 
 
 
+//feature and about
+// const featureAbout= document.querySelectorAll('.text-content'); 
+// let i = 0;  
+//   featureAbout.forEach(text =>{
+//    text.textContent = siteContent ['main-content'][`${i}`]; 
+//    i++ <= featureAbout.length; 
+//  })
+
+
+
+
+
+
+
+// const h4TFeature = document.querySelector('.text-content h4'); 
+// console.log(h4TFeature); 
+// h4TFeature.textContent = siteContent ['main-content'] ['features-h4']; 
+
+// const pTFeature = document.querySelector('.text-content p'); 
+// console.log(pTFeature); 
+// pTFeature.textContent = siteContent ['main-content'] ['features-content'];
+
+
