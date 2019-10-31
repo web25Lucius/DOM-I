@@ -57,13 +57,13 @@ let i = 1;
  })
 
 const h1Text = document.querySelector('h1'); 
-console.log(h1Text); 
+// console.log(h1Text); 
 h1Text.textContent = siteContent ['cta']['h1']; 
 //add <br> without using innerhtml 
 
 
 const btn = document.querySelector('button'); 
-console.log(btn); 
+// console.log(btn); 
 btn.textContent = siteContent ['cta']['button']; 
 
 
@@ -112,7 +112,8 @@ const contactP2 = document.querySelector('.contact:nth-last-child(2) p');
 console.log(contactP2); 
 contactP2.textContent = siteContent ['contact']['phone'];
 
-const contactP3 = document.querySelector('.contact:nth-last-child p'); 
+const contactP3 = document.querySelector('.contact p:nth-child(3)'); 
+console.log(contactP3);
 contactP3.textContent = siteContent ['contact']['email']; 
 
 
