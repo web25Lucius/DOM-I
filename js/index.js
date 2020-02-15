@@ -56,6 +56,18 @@ let i = 1;
    i++; 
  })
 
+
+const happy1 = document.createElement("a");  
+const grabNav = document.getElementsByTagName("nav")[0]; 
+happy1.textContent="happy1"; 
+grabNav.prepend(happy1); 
+
+
+const happy = document.createElement("a");  
+happy.textContent="happy";  
+happy1.appendChild(happy);
+
+
 const h1Text = document.querySelector('h1'); 
 // console.log(h1Text); 
 h1Text.textContent = siteContent ['cta']['h1']; 
