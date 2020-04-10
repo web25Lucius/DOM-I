@@ -105,21 +105,24 @@ visionP.textContent = siteContent ['main-content']['vision-content']
 const contacth4 = document.querySelector('.contact h4'); 
 contacth4.textContent = siteContent ['contact']['contact-h4']; 
 
-const contactP1 = document.querySelector('.contact p'); 
+
+const contactP1 = document.querySelector('section.contact p'); 
+// console.log(contactP1); 
 contactP1.textContent = siteContent ['contact']['address']; 
 
-const contactP2 = document.querySelector('.contact:nth-last-child(2) p'); 
+
+const contactP2 = document.querySelector('section.contact p:nth-last-child(2)'); 
 console.log(contactP2); 
 contactP2.textContent = siteContent ['contact']['phone'];
 
 const contactP3 = document.querySelector('.contact p:nth-child(3)'); 
-console.log(contactP3);
+// console.log(contactP3);
 contactP3.textContent = siteContent ['contact']['email']; 
 
 
 //footer section 
 const footerText = document.querySelector('footer p'); 
-console.log(footerText); 
+// console.log(footerText); 
 footerText.textContent = siteContent ['footer']['copyright']; 
 
 
