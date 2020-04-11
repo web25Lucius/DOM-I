@@ -30,7 +30,7 @@ const siteContent = {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "email" : "sales@greatidea.io"
   },
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
@@ -50,11 +50,33 @@ midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 //nav 
 const aTag= document.querySelectorAll('a'); 
+// aTag.style.font="green";
+
 let i = 1;  
  aTag.forEach(tags =>{
    tags.textContent = siteContent ['nav'][`nav-item-${i}`]; 
    i++; 
  })
+
+ aTag.forEach((element)=>{
+  element.addEventListener("click", (event) => {
+    //console.log(event.target)
+    event.stopPropagation();
+    event.target.style.color = "green";
+   
+  })
+})
+
+const happy1 = document.createElement("a");  
+const grabNav = document.getElementsByTagName("nav")[0]; 
+happy1.textContent="Nav"; 
+grabNav.prepend(happy1); 
+
+
+const happy = document.createElement("a");  
+happy.textContent=" Bar:";  
+happy1.appendChild(happy);
+
 
 const h1Text = document.querySelector('h1'); 
 // console.log(h1Text); 
@@ -105,21 +127,24 @@ visionP.textContent = siteContent ['main-content']['vision-content']
 const contacth4 = document.querySelector('.contact h4'); 
 contacth4.textContent = siteContent ['contact']['contact-h4']; 
 
-const contactP1 = document.querySelector('.contact p'); 
+
+const contactP1 = document.querySelector('section.contact p'); 
+// console.log(contactP1); 
 contactP1.textContent = siteContent ['contact']['address']; 
 
-const contactP2 = document.querySelector('.contact:nth-last-child(2) p'); 
-console.log(contactP2); 
+
+const contactP2 = document.querySelector('section.contact p:nth-last-child(2)'); 
+// console.log(contactP2); 
 contactP2.textContent = siteContent ['contact']['phone'];
 
 const contactP3 = document.querySelector('.contact p:nth-child(3)'); 
-console.log(contactP3);
+// console.log(contactP3);
 contactP3.textContent = siteContent ['contact']['email']; 
 
 
 //footer section 
 const footerText = document.querySelector('footer p'); 
-console.log(footerText); 
+// console.log(footerText); 
 footerText.textContent = siteContent ['footer']['copyright']; 
 
 
