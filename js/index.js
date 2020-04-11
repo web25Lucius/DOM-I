@@ -58,6 +58,15 @@ let i = 1;
    i++; 
  })
 
+ aTag.forEach((element)=>{
+  element.addEventListener("click", (event) => {
+    //console.log(event.target)
+    event.stopPropagation();
+    event.target.style.color = "green";
+   
+  })
+})
+
 const happy1 = document.createElement("a");  
 const grabNav = document.getElementsByTagName("nav")[0]; 
 happy1.textContent="Nav"; 
